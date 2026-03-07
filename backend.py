@@ -12,3 +12,17 @@ MONGO_URI = st.secrets["MONGO_URI"]
 DB_NAME="vector_store_database"
 COLLECTION_NAME="embeddings_stream"
 ATLAS_VECTOR_SEARCH="vector_index"
+
+def get_vector_store():
+    client = MongoClient(MONGO_URI)
+    collection = client[DB_NAME][COLLECTION_NAME]
+    # embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
+    embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+
+    vector_store = MongoDBAtlasVectorSearch(
+        collection=collection,
+        embedding=embeddings,
+        index_name=ATLAS_VECTOR_SEARCH
+    )
+    return vector_store
+
