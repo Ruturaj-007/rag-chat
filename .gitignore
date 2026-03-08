@@ -2,9 +2,10 @@
 __pycache__/
 *.py[codz]
 *$py.class
-./streamlit/secrets.toml
 # C extensions
 *.so
+
+.streamlit/secrets.toml    ✅
 
 # Distribution / packaging
 .Python
