@@ -1,10 +1,14 @@
 streamlit
 pymongo
 langchain
+langchain-core
+langchain-community
 langchain-google-genai
 langchain-mongodb
+langchain-huggingface
 python-dotenv
 sentence-transformers
-langchain_community
 plotly
 scikit-learn
+numpy
+pandas

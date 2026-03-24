@@ -1,0 +1,8 @@
+{
+  "python.analysis.extraPaths": [
+    "./rag_template"
+  ],
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "css.lint.vendorPrefix": "ignore"
+}
